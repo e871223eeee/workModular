@@ -16,8 +16,7 @@ ___
   <span>{{ errors[0] }}</span>
 </validation-provider>
 ```
-備註：v-slot 稱為插槽（Vue 的元件語法之一），可以將驗證結果的回饋資料直接帶入於區塊中，相關概念可參考：
-https://cn.vuejs.org/v2/guide/components-slots.html#作用域插槽
+備註：v-slot 稱為插槽（Vue 的元件語法之一），可以將驗證結果的回饋資料直接帶入於區塊中
 ___
 加入樣式，JavaScript 加入 Bootstrap 樣式設定，可使用以下設定
 ```html
