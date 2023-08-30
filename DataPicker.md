@@ -4,38 +4,66 @@
 <script>
 //引入日期選擇器
 import DatePicker from "vue2-datepicker";
+//引入時間選擇器
+import DatePickerEx from "@/components/Util/DatePickerEx.vue";
+
 export default {
   //名稱
   name: "XXXXX",
   components: {
-    //日期選擇器方法
-    DatePicker
+    //定義時間選擇器
+    DatePickerEx,
   },
 };
 </script>
 ```
 ___
-使用方式(結合validation)
-  - :formatter : yearFormatter/yearMonthFormatter/defaultFormatter(YYYY,YYYY/MM,YYYY/MM/DD)
-  - type="格式" : year/month/day(選年,選年月,選年月日)
+使用方式(沒有輸入驗證)
+  - CustomValue_1 : 名子有對到就好
+  - CustomValue_2 : 綁定的變數名稱
+  - CustomValue_3 : 輸出格式
+    - yearFormatter : YYY
+    - yearFormatter : YYY/MM
+    - defaultFormatter : YYY/MM/DD
+  - CustomValue_4 : 選單格式
+    - year : 選年
+    - month : 選年月
+    - day : 選年月日
 ```html
-<div class="form-group required">
-  <validation-provider
-    v-slot="{ classes, errors }"
-    :rules="{ required: true }"
-    name="該欄位名稱"
-  >
-    <Date-Picker
-      v-model="綁定的變數 EX:A"
-      :input-attr="{ id: '綁定的變數名稱 EX:A' }"
-      :input-class="{ ...classes, 'form-control': true }"
-      :formatter="顯示的格式"
-      placeholder="輸入框內要顯示的文字"
-      type="格式"
-      output="number"
-      class="d-block"
-    />
-    <span class="text-danger position-absolute">{{ errors[0] }}</span>
-  </validation-provider>
+<div class="form-group me-3 mb-4">
+  <div class="row">
+    <div class="col">
+      <label for="CustomValue_1" class="form-label">CustomValue_選擇器標題</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-auto">
+      <DatePickerEx
+        v-model="formInput.CustomValue_2"
+        :input-attr="{ id: 'CustomValue_1' }"
+        :input-class="{ 'form-control': true }"
+        :formatter="CustomValue_3"
+        placeholder="CustomValue_未輸入時顯示"
+        output="number"
+        type="CustomValue_4"
+        class="d-block"
+      />
+    </div>
+  </div>
 </div>
+```
+
+___
+資料範例
+script內的需要加上的東西範例
+```C#
+//資料
+data() {
+  return {
+    //資料
+    formInput: {
+      CustomValue_2:""
+    },
+  };
+},
 ```
