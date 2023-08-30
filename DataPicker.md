@@ -2,8 +2,6 @@
 先在<script>區域引入該元件並定義
 ```C#
 <script>
-//引入日期選擇器
-import DatePicker from "vue2-datepicker";
 //引入時間選擇器
 import DatePickerEx from "@/components/Util/DatePickerEx.vue";
 
