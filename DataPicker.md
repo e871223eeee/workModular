@@ -26,7 +26,7 @@ ___
   - CustomValue_4 : 選單格式
     - year : 選年
     - month : 選年月
-    - day : 選年月日
+    - 直接不填該欄位: 選年月日
 ```html
 <div class="form-group me-3 mb-4">
   <div class="row">
