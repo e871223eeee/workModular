@@ -1,42 +1,47 @@
 **下拉式選單使用範例**
-結合輸入驗證
   - :key ->唯一值 綁變數的鍵值或是直接綁index
   - :value ->索引值 會跟v-model的變數值做交互 如果有初始值會根據該值查詢
-
+  - CustomValue->有此前綴的為需要改的變數
+___
+沒有輸入驗證版本
 ```html
-<validation-provider 
-  name="單位名稱" 
-  :rules="{ required: true }" 
-  v-slot="{ classes, errors }"
-  >
-  <select class="form-select" :class="classes" v-model="formInput.selectValue">
-    <option value="">初始顯示文字(可不加)</option>
-    <option
-      v-for="dataValue in options.selectValueArray"
-      :key="dataValue.id"
-      :value="dataValue.id"
-    >
-      {{ dataValue.name }}
-    </option>
-  </select>
-  <span class="text-danger h-24 position-absolute">{{ errors[0] }}</span>
-</validation-provider>
+<div class="form-group me-3 mb-4">
+  <div class="row">
+    <div class="col-auto">
+      <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-auto">
+      <select id="CustomValue_1" v-model="formInput.CustomValue_2" class="form-select">
+      <option value="">CustomValue_選單預設值(可不加)</option>
+      <option
+        v-for="option in options.CustomValue_3"
+        :key="option"
+        :value="option"
+      >
+        {{ option.CustomValue_4 }}
+      </option>
+    </select>
+    </div>
+  </div>
+</div>
 ```
 ___
-script內的需要加上的東西
+script內的需要加上的東西範例
 ```C#
 //資料
 data() {
   return {
     //資料(該畫面輸入資料或是要顯示的資料)
     formInput: {
-      selectValue:""
+      CustomValue_2:""
     },
 
     //選項(下拉式選單用)
     options: {
       //(假資料)
-      selectValueArray: [{id:0, name:"AAA"},{id:1, name:"BBB"},{id:2, name:"CCC"},{id:3, name:"DDD"},{id:4, name:"EEE"},{id:5, name:"FFF"}],
+      selectValueArray: [{id:0, CustomValue_3:"AAA"},{id:1, CustomValue_3:"BBB"},{id:2, CustomValue_3:"CCC"},{id:3, CustomValue_3:"DDD"},{id:4, CustomValue_3:"EEE"},{id:5, CustomValue_3:"FFF"}],
     },
   };
 },
