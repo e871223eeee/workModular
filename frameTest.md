@@ -5,7 +5,7 @@
     <!-- 程式主體 -->
     <template #search>
       <!-- 控制器 -->
-      <div class="container">
+      <div class="container-fluid">
         <!-- 一行顯示 -->
         <div class="row">
           <div class="col">
