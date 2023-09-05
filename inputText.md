@@ -4,6 +4,19 @@
     - CustomValue_1 ->兩個位置的名稱有對應到就好
     - CustomValue_2 ->要綁定的變數，變數與畫面顯示同步
  ___
+沒有輸入驗證的版本
+```html
+<div class="form-group me-3 mb-4">
+  <label for="CustomValue_1"class="form-label">CustomValue_標題</label>
+  <input
+    id="CustomValue_1"
+    v-model="formInput.CustomValue_2"
+    type="text"
+    class="form-control"
+  >
+</div>
+```
+___
  有輸入驗證的版本
 ```html
 <div class="form-group me-3 mb-4 required">
