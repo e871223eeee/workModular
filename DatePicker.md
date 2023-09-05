@@ -31,60 +31,41 @@ ___
 沒有輸入驗證版本
 ```html
 <div class="form-group me-3 mb-4">
-  <div class="row">
-    <div class="col">
-      <label for="CustomValue_1" class="form-label">CustomValue_選擇器標題</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-auto">
-      <DatePickerEx
-        v-model="formInput.CustomValue_2"
-        :input-attr="{ id: 'CustomValue_1' }"
-        :input-class="{ 'form-control': true }"
-        :formatter="CustomValue_3"
-        placeholder="CustomValue_未輸入時顯示"
-        output="number"
-        type="CustomValue_4"
-        class="d-block"
-      />
-    </div>
-  </div>
+  <label for="CustomValue_1" class="form-label">CustomValue_選擇器標題</label>
+    <DatePickerEx
+      v-model="formInput.CustomValue_2"
+      :input-attr="{ id: 'CustomValue_1' }"
+      :input-class="{ 'form-control': true }"
+      :formatter="CustomValue_3"
+      placeholder="CustomValue_未輸入時顯示"
+      output="number"
+      type="CustomValue_4"
+      class="d-block"
+    />
 </div>
 ```
 ___
 輸入驗證版本
 ```html
 <div class="form-group me-3 mb-4 required">
-  <div class="row">
-    <div class="col-auto">
-      <label for="CustomValue_1" class="form-label">
-        <span>CustomValue_選擇器標題</span>
-        <span class="text-danger">*</span>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-auto">
-      <validation-provider
-        v-slot="{ classes, errors }"
-        :rules="{ required: true }"
-        name="CustomValue_選擇器標題"
-      >
-        <DatePickerEx
-          v-model="formInput.CustomValue_2"
-          :input-attr="{ id: 'CustomValue_1' }"
-          :input-class="{ ...classes, 'form-control': true }"
-          :formatter="CustomValue_3"
-          placeholder="CustomValue_未輸入時顯示"
-          type="CustomValue_4"
-          output="number"
-          class="d-block"
-        />
-        <span class="text-danger position-absolute">{{ errors[0] }}</span>
-      </validation-provider>
-    </div>
-  </div>
+  <label for="CustomValue_1" class="form-label">CustomValue_選擇器標題</label>
+    <validation-provider
+      v-slot="{ classes, errors }"
+      :rules="{ required: true }"
+      name="CustomValue_選擇器標題"
+    >
+      <DatePickerEx
+        v-model="formInput.CustomValue_2"
+        :input-attr="{ id: 'CustomValue_1' }"
+        :input-class="{ ...classes, 'form-control': true }"
+        :formatter="CustomValue_3"
+        placeholder="CustomValue_未輸入時顯示"
+        type="CustomValue_4"
+        output="number"
+        class="d-block"
+      />
+      <span class="text-danger position-absolute">{{ errors[0] }}</span>
+    </validation-provider>
 </div>
 ```
 ___
