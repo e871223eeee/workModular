@@ -27,7 +27,7 @@ ___
               <button
                 type="button"
                 class="btn btn-link text-decoration-none me-2"
-                @click="$router.go(-1)"
+                @click="goBack"
               >
                 返回
               </button>
@@ -75,6 +75,10 @@ export default {
     //新增
     createHandler() {
       
+    },
+    //返回
+    goBack() {
+      this.$router.push(`路徑`);
     },
   },
 };
