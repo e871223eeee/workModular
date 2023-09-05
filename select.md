@@ -40,7 +40,7 @@ ___
   <div class="row">
     <div class="col-auto">
       <label for="CustomValue_1" class="form-label">
-        <span>區處</span>
+        <span>CustomValue_標題</span>
         <span class="text-danger">*</span>
       </label>
     </div>
