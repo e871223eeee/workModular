@@ -12,22 +12,27 @@ ___
       />
       <!-- 內容 -->
       <section class="mx-7 my-4">
-        <!-- 新增/返回 -->
-        <div class="mt-2 mb-4">
-          <button
-            type="button"
-            class="btn btn-primary me-2"
-            @click="handleSubmit(createHandler)"
-          >
-            新增
-          </button>
-          <button
-            type="button"
-            class="btn btn-link text-decoration-none me-2"
-            @click="$router.go(-1)"
-          >
-            返回
-          </button>
+        <!-- 控制器 -->
+        <div class="container-fluid">
+          <!-- 新增/返回 -->
+          <div class="row">
+            <div class="col mt-2 mb-4">
+              <button
+                type="button"
+                class="btn btn-primary me-2"
+                @click="handleSubmit(createHandler)"
+              >
+                新增
+              </button>
+              <button
+                type="button"
+                class="btn btn-link text-decoration-none me-2"
+                @click="$router.go(-1)"
+              >
+                返回
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
