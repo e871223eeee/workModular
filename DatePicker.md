@@ -2,14 +2,14 @@
 先在<script>區域引入該元件並定義
 ```C#
 <script>
-//引入時間選擇器
+//引入時間選擇器模塊
 import DatePickerEx from "@/components/Util/DatePickerEx.vue";
 
 export default {
   //名稱
   name: "XXXXX",
   components: {
-    //定義時間選擇器
+    //定義時間選擇器模塊
     DatePickerEx,
   },
 };
