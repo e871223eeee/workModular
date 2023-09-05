@@ -7,32 +7,21 @@
  有輸入驗證的版本
 ```html
 <div class="form-group me-3 mb-4 required">
-  <div class="row">
-    <div class="col-auto">
-      <label for="CustomValue_1" class="form-label">
-        <span>CustomValue_標題</span>
-        <span class="text-danger">*</span>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-auto">
-      <validation-provider
-      v-slot="{ classes, errors }"
-      name="CustomValue_標題"
-      :rules="{ required: true }"
-      >
-        <input
-          id="CustomValue_1"
-          v-model="formInput.CustomValue_2"
-          type="text"
-          class="form-control"
-          :class="classes"
-        >
-        <span class="text-danger position-absolute">{{ errors[0] }}</span>
-      </validation-provider>
-    </div>
-  </div>
+  <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
+  <validation-provider
+  v-slot="{ classes, errors }"
+  name="CustomValue_標題"
+  :rules="{ required: true }"
+  >
+    <input
+      id="CustomValue_1"
+      v-model="formInput.CustomValue_2"
+      type="text"
+      class="form-control"
+      :class="classes"
+    >
+    <span class="text-danger position-absolute">{{ errors[0] }}</span>
+  </validation-provider>
 </div>
 ```
 ___
