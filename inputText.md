@@ -3,6 +3,8 @@
     - CustomValue_標題 ->標題
     - CustomValue_1 ->兩個位置的名稱有對應到就好
     - CustomValue_2 ->要綁定的變數，變數與畫面顯示同步
+ ___
+ 有輸入驗證的版本
 ```html
 <div class="form-group me-3 mb-4 required">
   <div class="row">
