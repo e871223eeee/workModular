@@ -39,7 +39,10 @@ ___
 <div class="form-group me-3 mb-4 required">
   <div class="row">
     <div class="col-auto">
-      <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
+      <label for="CustomValue_1" class="form-label">
+        <span>區處</span>
+        <span class="text-danger">*</span>
+      </label>
     </div>
   </div>
   <div class="row">
