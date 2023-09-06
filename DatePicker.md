@@ -33,16 +33,16 @@ ___
 <div class="input-group">
   <div class="form-group me-3 mb-4">
     <label for="CustomValue_1" class="form-label">CustomValue_選擇器標題</label>
-      <DatePickerEx
-        v-model="formInput.CustomValue_2"
-        :input-attr="{ id: 'CustomValue_1' }"
-        :input-class="{ 'form-control': true }"
-        :formatter="CustomValue_3"
-        placeholder="CustomValue_未輸入時顯示"
-        output="number"
-        type="CustomValue_4"
-        class="d-block"
-      />
+    <DatePickerEx
+      v-model="formInput.CustomValue_2"
+      :input-attr="{ id: 'CustomValue_1' }"
+      :input-class="{ 'form-control': true }"
+      :formatter="CustomValue_3"
+      placeholder="CustomValue_未輸入時顯示"
+      output="number"
+      type="CustomValue_4"
+      class="d-block"
+    />
   </div>
 </div>
 ```
@@ -52,23 +52,23 @@ ___
 <div class="input-group">
   <div class="form-group me-3 mb-4 required">
     <label for="CustomValue_1" class="form-label">CustomValue_選擇器標題</label>
-      <validation-provider
-        v-slot="{ classes, errors }"
-        :rules="{ required: true }"
-        name="CustomValue_選擇器標題"
-      >
-        <DatePickerEx
-          v-model="formInput.CustomValue_2"
-          :input-attr="{ id: 'CustomValue_1' }"
-          :input-class="{ ...classes, 'form-control': true }"
-          :formatter="CustomValue_3"
-          placeholder="CustomValue_未輸入時顯示"
-          type="CustomValue_4"
-          output="number"
-          class="d-block"
-        />
-        <span class="text-danger position-absolute">{{ errors[0] }}</span>
-      </validation-provider>
+    <validation-provider
+      v-slot="{ classes, errors }"
+      :rules="{ required: true }"
+      name="CustomValue_選擇器標題"
+    >
+      <DatePickerEx
+        v-model="formInput.CustomValue_2"
+        :input-attr="{ id: 'CustomValue_1' }"
+        :input-class="{ ...classes, 'form-control': true }"
+        :formatter="CustomValue_3"
+        placeholder="CustomValue_未輸入時顯示"
+        type="CustomValue_4"
+        output="number"
+        class="d-block"
+      />
+      <span class="text-danger position-absolute">{{ errors[0] }}</span>
+    </validation-provider>
   </div>
 </div>
 ```
