@@ -1,4 +1,5 @@
 **一般輸入框範例**
+ - 如果要有提示字 -> placeholder=""
  - CustomValue->有此前綴的為需要改的變數
     - CustomValue_標題 ->標題
     - CustomValue_1 ->兩個位置的名稱有對應到就好
