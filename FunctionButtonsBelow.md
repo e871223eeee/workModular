@@ -5,7 +5,7 @@
     <button
       type="button"
       class="btn btn-secondary text-white"
-      @click="handleSubmit()"
+      @click="handleSubmit(createHandler)"
     >
       新增
     </button>
@@ -14,7 +14,7 @@
     <button
       type="button"
       class="btn btn-primary"
-      @click="handleSubmit()"
+      @click="handleSubmit(reviseHandler)"
     >
       確認
     </button>
@@ -23,7 +23,7 @@
     <button
       type="button"
       class="btn btn-danger"
-      @click="handleSubmit()"
+      @click="handleSubmit(deleteHandler)"
     >
       刪除
     </button>
@@ -39,3 +39,27 @@
   </div>
 </div>
 ```
+___
+script部分
+```C#
+//方法
+methods: {
+  //新增
+  createHandler() {
+    console.log(this.formInput);
+  },
+  //修改
+  reviseHandler() {
+    console.log(this.formInput);
+  },
+  //刪除
+  deleteHandler() {
+    console.log(this.formInput);
+  },
+  //返回
+  goBack() {
+    this.$router.push(`路徑`);
+  },
+},
+```
+___
