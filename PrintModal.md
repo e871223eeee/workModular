@@ -3,13 +3,13 @@
 先在<script>區域引入該元件並定義
 ```C#
 <script>
-//列印方法
+//引入列印模塊
 import PrintModal from "@/components/Common/modals/PrintModal";
 export default {
   //名稱
   name: "XXXXX",
   components: {
-    //定義列印方法
+    //定義列印模塊
     PrintModal
   },
 };
