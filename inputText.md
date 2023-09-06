@@ -8,7 +8,7 @@
 ```html
 <div class="input-group">
   <div class="form-group me-3 mb-4">
-    <label for="CustomValue_1"class="form-label">CustomValue_標題</label>
+    <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
     <input
       id="CustomValue_1"
       v-model="formInput.CustomValue_2"
