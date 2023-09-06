@@ -1,0 +1,52 @@
+**一排多個輸入框範例**
+- CustomValue->有此前綴的為需要改的變數
+  - CustomValue_標題 ->標題
+  - CustomValue_文字1 ->如果中間要顯示文字或是符號可以加入
+  - CustomValue_文字2 ->如果中間要顯示文字或是符號可以加入
+  - CustomValue_1 ->兩個位置的名稱有對應到就好
+  - CustomValue_2 ->要綁定的變數，變數與畫面顯示同步
+  - CustomValue_3 ->要綁定的變數，變數與畫面顯示同步
+  - CustomValue_4 ->要綁定的變數，變數與畫面顯示同步
+```html
+<div class="input-group">
+  <div class="form-group mb-4">
+    <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
+    <div class="d-flex flex-row align-items-center">
+      <nobr><span class="me-1">XXXXX</span></nobr>
+      <input
+        id="CustomValue_1"
+        v-model="formInput.CustomValue_2"
+        type="text"
+        class="form-control"
+      />
+      <nobr><span class="mx-1">CustomValue_文字1</span></nobr>
+      <input
+        v-model="formInput.CustomValue_3"
+        type="text"
+        class="form-control"
+      />
+      <nobr><span class="mx-1">CustomValue_文字2</span></nobr>
+      <input
+        v-model="formInput.CustomValue_4"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+</div>
+```
+___
+script內的需要加上的東西範例
+```C#
+//資料
+data() {
+  return {
+    //資料(該畫面輸入資料或是要顯示的資料)
+    formInput: {
+      CustomValue_2:"",
+      CustomValue_3:"",
+      CustomValue_4:"",
+    },
+  };
+},
+```
