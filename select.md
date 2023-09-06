@@ -11,36 +11,10 @@
 ___
 沒有輸入驗證版本
 ```html
-<div class="form-group me-3 mb-4">
-  <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
-  <select id="CustomValue_1" v-model="formInput.CustomValue_2" class="form-select">
-    <option value="">CustomValue_選單預設值(可不加)</option>
-    <option
-      v-for="option in options.CustomValue_3"
-      :key="option.CustomValue_4"
-      :value="option.CustomValue_4"
-    >
-      {{ option.CustomValue_5 }}
-    </option>
-  </select>
-</div>
-```
-___
-有輸入驗證的版本
-```html
-<div class="form-group me-3 mb-4 required">
-  <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
-  <validation-provider
-    v-slot="{ classes, errors }"
-    :rules="{ required: true }"
-    name="CustomValue_標題"
-  >
-    <select
-      id="CustomValue_1"
-      v-model="formInput.CustomValue_2"
-      :class="classes"
-      class="form-select"
-    >
+<div class="input-group">
+  <div class="form-group me-3 mb-4">
+    <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
+    <select id="CustomValue_1" v-model="formInput.CustomValue_2" class="form-select">
       <option value="">CustomValue_選單預設值(可不加)</option>
       <option
         v-for="option in options.CustomValue_3"
@@ -50,8 +24,38 @@ ___
         {{ option.CustomValue_5 }}
       </option>
     </select>
-    <span class="text-danger position-absolute">{{ errors[0] }}</span>
-  </validation-provider>
+  </div>
+</div>
+```
+___
+有輸入驗證的版本
+```html
+<div class="input-group">
+  <div class="form-group me-3 mb-4 required">
+    <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
+    <validation-provider
+      v-slot="{ classes, errors }"
+      :rules="{ required: true }"
+      name="CustomValue_標題"
+    >
+      <select
+        id="CustomValue_1"
+        v-model="formInput.CustomValue_2"
+        :class="classes"
+        class="form-select"
+      >
+        <option value="">CustomValue_選單預設值(可不加)</option>
+        <option
+          v-for="option in options.CustomValue_3"
+          :key="option.CustomValue_4"
+          :value="option.CustomValue_4"
+        >
+          {{ option.CustomValue_5 }}
+        </option>
+      </select>
+      <span class="text-danger position-absolute">{{ errors[0] }}</span>
+    </validation-provider>
+  </div>
 </div>
 ```
 ___
