@@ -4,21 +4,7 @@
   <DefaultView :module-key="$route.name" :module-title="title">
     <!-- 程式主體 -->
     <template #search>
-      <!-- 控制器 -->
-      <div class="container-fluid">
-        <!-- 一行顯示 -->
-        <div class="row">
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
-        </div>
-      </div>
+      
     </template>
     <!-- 表格 -->
     <template #data-table>
