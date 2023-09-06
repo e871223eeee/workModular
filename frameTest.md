@@ -1,7 +1,7 @@
 **畫面初始程式碼**
 ```html
 <template>
-  <DefaultView :module-key="$route.name" :module-title="title">
+  <DefaultLayout :module-key="$route.name" :module-title="title">
     <!-- 程式主體 -->
     <template #search>
       
@@ -10,21 +10,21 @@
     <template #data-table>
 
     </template>
-  </DefaultView>
+  </DefaultLayout>
 </template>
 
 
 <!-- js -->
 <script>
 //引入公版
-import DefaultView from "@/components/Layout/DefaultLayout.vue";
+import DefaultLayout from "@/components/Layout/DefaultLayout.vue";
 
 export default {
   //名稱
   name: "檔案編號",
   components: {
     //定義公版
-    DefaultView,
+    DefaultLayout,
   },
   //資料
   data() {
