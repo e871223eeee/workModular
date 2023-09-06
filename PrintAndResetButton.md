@@ -4,23 +4,23 @@
 - [列印元件](https://github.com/e871223eeee/workModular/blob/main/PrintModal.md)
 ```html
 <!-- 列印/清除 -->
-<div class="row mt-5">
-  <div class="col-auto mt-5">
+<div class="input-group align-items-end mt-6">
+  <div class="me-3">
     <button
-    type="button"
-    class="btn btn-primary"
-    @click="handleSubmit(showPrintModal)"
+      type="button"
+      class="btn btn-primary"
+      @click="handleSubmit(showPrintModal)"
     >
-    列印
+      列印
     </button>
   </div>
-  <div class="col-auto mt-5">
+  <div class="me-3">
     <button
-    type="button"
-    class="btn btn-link text-decoration-none"
-    @click="resetForm"
+      type="button"
+      class="btn btn-outline-secondary"
+      @click="resetForm"
     >
-    清除
+      清除
     </button>
   </div>
 </div>
