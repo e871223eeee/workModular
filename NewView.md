@@ -1,4 +1,4 @@
-**新增資料(跳出新畫面)**
+**跳出新畫面**
 適用於要新增的內容較多時
 ___
 ```html
@@ -12,25 +12,7 @@ ___
       />
       <!-- 內容 -->
       <section class="mx-7 my-4">
-        <!-- 新增/返回 -->
-        <div class="row">
-          <div class="col mt-2 mb-4">
-            <button
-              type="button"
-              class="btn btn-primary me-2"
-              @click="handleSubmit(createHandler)"
-            >
-              新增
-            </button>
-            <button
-              type="button"
-              class="btn btn-link text-decoration-none me-2"
-              @click="goBack"
-            >
-              返回
-            </button>
-          </div>
-        </div>
+        
       </section>
     </div>
   </validation-observer>
@@ -69,7 +51,7 @@ export default {
   },
   //方法
   methods: {
-    //新增
+    //資料處理(刪除/修改...)
     createHandler() {
       
     },
