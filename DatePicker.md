@@ -18,6 +18,7 @@ export default {
 ```
 
 ___
+- 如果要連動function -> 加入 @input=""
 - CustomValue_1 : 名子有對到就好
   - CustomValue_2 : 綁定的變數名稱
   - CustomValue_3 : 輸出格式
@@ -28,6 +29,7 @@ ___
     - year : 選年
     - month : 選年月
     - 直接不填該欄位: 選年月日
+
 ___
 沒有輸入驗證版本
 ```html
