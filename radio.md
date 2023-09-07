@@ -1,37 +1,46 @@
 **選項按鈕範例**
+___
+- CustomValue_1 -> 名子有對到就好
+- CustomValue_2 -> 綁定的變數名稱
+- CustomValue_key -> 名子有對到就好
 ```html
-<div class="row mt-5">
-  <div class="col=auto">
-    <label class="form-label">
-      <span>標題</span>
-    </label>
-  </div>
-</div>
-<div class="row">
-  <div class="col-auto">
-    <div class="form-check me-2">
-      <input
-        class="form-check-input"
-        type="radio"
-        name="群組名稱"
-        id="isValueTrue"
-        v-model="formInput.isValue"
-        value="true"
-      />
-      <label class="form-check-label" for="isValueTrue"> 是 </label>
-    </div>
-  </div>
-  <div class="col-auto">
-    <div class="form-check me-2">
-      <input
-        class="form-check-input"
-        type="radio"
-        name="群組名稱"
-        id="isValueFalse"
-        v-model="formInput.isValue"
-        value="false"
-      />
-      <label class="form-check-label" for="isValueFalse"> 否 </label>
+<div class="input-group">
+  <div class="form-group me-3 mb-4">
+    <label class="form-label">CustomValue_標題</label>
+    <div class="d-flex flex-row align-items-center">
+      <div class="form-check me-2">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="CustomValue_1"
+          id="CustomValue_key_1"
+          v-model="formInput.CustomValue_2"
+          value="0"
+        />
+        <label class="form-check-label" for="CustomValue_1"> 全部 </label>
+      </div>
+      <div class="form-check me-2">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="CustomValue_1"
+          id="CustomValue_key_2"
+          v-model="formInput.CustomValue_2"
+          value="1"
+        />
+        <label class="form-check-label" for="CustomValue_key_2"> 廢料 </label>
+      </div>
+      <div class="form-check me-2">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="CustomValue_1"
+          id="CustomValue_key_3"
+          v-model="formInput.CustomValue_2"
+          value="2"
+        />
+        <label class="form-check-label" for="CustomValue_key_3"> 非廢料 </label>
+      </div>
     </div>
   </div>
 </div>
@@ -44,7 +53,7 @@ data() {
   return {
     //資料(該畫面輸入資料或是要顯示的資料)
     formInput: {
-      isValue:""
+      CustomValue_2:""
     },
   };
 },
