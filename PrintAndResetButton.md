@@ -2,6 +2,8 @@
 配合
 - [驗證](https://github.com/e871223eeee/workModular/blob/main/vee-validate.md)
 - [列印元件](https://github.com/e871223eeee/workModular/blob/main/PrintModal.md)
+___
+- 沒有驗證就不用 handleSubmit 包方法
 ```html
 <!-- 列印/清除 -->
 <div class="input-group align-items-end mt-6">
@@ -26,40 +28,66 @@
 </div>
 ```
 ___
+如果有驗證(包在最外面)
+```html
+<!-- 驗證 -->
+<validation-observer v-slot="{ handleSubmit }">
+</validation-observer>
+```
+___
+將該元件放置於中section中 並且撰寫方法於methods中
+```html
+<!-- 列印元件視窗 -->
+<PrintModal ref="PrintModal" title="列印" :printXls="printXls" :printOdf="printOdf" />
+```
+___
 script內容
-```C#
-//方法
-methods: {
-  //清除資料
-  resetForm() {
-    this.formInput = {
-      AAA: "",
-      BBB: "",
-      CCC: "",
-      DDD:true,
-      EEE: "",
-      FFF: "",
-      GGG: true,
-      HHH: 0
-    };
+```html
+<script>
+//引入列印模塊
+import PrintModal from "@/components/Common/modals/PrintModal";
+export default {
+  //名稱
+  name: "XXXXX",
+  components: {
+    //定義列印模塊
+    PrintModal
   },
-  //列印方法
-  showPrintModal() {
-    this.$refs.PrintModal.modal.show();
+
+  //方法
+  methods: {
+    //清除資料
+    resetForm() {
+      this.formInput = {
+        AAA: "",
+        BBB: "",
+        CCC: "",
+        DDD:true,
+        EEE: "",
+        FFF: "",
+        GGG: true,
+        HHH: 0
+      };
+    },
+    //列印方法
+    showPrintModal() {
+      this.$refs.PrintModal.modal.show();
+    },
+    //Xls格式列印
+    printXls() {
+      window.open(
+        
+      );
+      this.$refs.PrintModal.modal.hide();
+    },
+    //Odf格式列印
+    printOdf() {
+      window.open(
+        
+      );
+      this.$refs.PrintModal.modal.hide();
+    }
   },
-  //Xls格式列印
-  printXls() {
-    window.open(
-      
-    );
-    this.$refs.PrintModal.modal.hide();
-  },
-  //Odf格式列印
-  printOdf() {
-    window.open(
-      
-    );
-    this.$refs.PrintModal.modal.hide();
-  }
-},
+};
+</script>
 ```
