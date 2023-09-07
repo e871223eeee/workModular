@@ -16,14 +16,14 @@
 
 <!-- js -->
 <script>
-//引入公版
+//引入公版模塊
 import DefaultLayout from "@/components/Layout/DefaultLayout.vue";
 
 export default {
   //名稱
   name: "檔案編號",
   components: {
-    //定義公版
+    //定義公版模塊
     DefaultLayout,
   },
   //資料
