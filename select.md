@@ -60,6 +60,62 @@ ___
 </div>
 ```
 ___
+起訖範例
+```html
+<div class="input-group">
+  <div class="form-group me-3 mb-4 required">
+    <label for="CustomValue_1 Select" class="form-label">CustomValue_標題</label>
+    <div class="d-flex flex-row align-items-center">
+      <validation-provider
+        v-slot="{ classes, errors }"
+        :rules="{ required: true }"
+        name="CustomValue_標題"
+      >
+        <select
+          id="CustomValue_1 Select"
+          v-model="formInput.CustomValue_2"
+          :class="classes"
+          class="form-select"
+        >
+          <option value="">CustomValue_選單預設值(可不加)</option>
+          <option
+            v-for="option in options.CustomValue_3"
+            :key="option.CustomValue_4"
+            :value="option.CustomValue_4"
+          >
+            {{ option.CustomValue_5 }}
+          </option>
+        </select>
+        <span class="text-danger position-absolute">{{ errors[0] }}</span>
+      </validation-provider>
+      <nobr><span class="mx-2">~</span></nobr>
+      <validation-provider
+        v-slot="{ classes, errors }"
+        :rules="{ required: true }"
+        name="CustomValue_標題"
+      >
+        <select
+          id="CustomValue_1 Select"
+          v-model="formInput.CustomValue_2"
+          :class="classes"
+          class="form-select"
+        >
+          <option value="">CustomValue_選單預設值(可不加)</option>
+          <option
+            v-for="option in options.CustomValue_3"
+            :key="option.CustomValue_4"
+            :value="option.CustomValue_4"
+          >
+            {{ option.CustomValue_5 }}
+          </option>
+        </select>
+        <span class="text-danger position-absolute">{{ errors[0] }}</span>
+      </validation-provider>
+    </div>
+  </div>
+</div>
+```
+___
 script內的需要加上的東西範例
 ```C#
 //資料
