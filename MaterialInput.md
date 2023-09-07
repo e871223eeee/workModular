@@ -15,24 +15,20 @@ export default {
 </script>
 ```
 ___
--CustomValue->有此前綴的為需要改的變數
- -CustomValue_標題 ->標題
- -CustomValue_1 ->要綁定的變數，變數與畫面顯示同步
+- v-model -> 預設綁定的變數(起)
+- :end.sync -> 綁定迄的變數(選填)
+- required -> 輸入驗證(選填)
 ___
-沒有輸入驗證版本
 ```html
 <!-- 材料編號 -->
-<div class="form-group me-3 mb-4">
-  <label class="form-label">CustomValue_標題</label>
-  <MaterialInput v-model="formInput.CustomValue_1"/>
-</div>
-```
-___
-輸入驗證版本
-```html
-<!-- 材料編號 -->
-<div class="form-group me-3 mb-4 required">
-  <label class="form-label">CustomValue_標題</label>
-  <MaterialInput v-model="formInput.CustomValue_1"/>
+<div class="input-group">
+  <div class="form-group me-3 mb-4">
+    <label class="form-label">材料編號</label>
+    <MaterialInput
+      v-model="formInput.CustomValue_1"
+      :end.sync="formInput.CustomValue_2"
+      required
+    />
+  </div>
 </div>
 ```
