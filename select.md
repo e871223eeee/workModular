@@ -14,8 +14,8 @@ ___
 ```html
 <div class="input-group">
   <div class="form-group me-3 mb-4">
-    <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
-    <select id="CustomValue_1" v-model="formInput.CustomValue_2" class="form-select">
+    <label for="CustomValue_1 Select" class="form-label">CustomValue_標題</label>
+    <select id="CustomValue_1 Select" v-model="formInput.CustomValue_2" class="form-select">
       <option value="">CustomValue_選單預設值(可不加)</option>
       <option
         v-for="option in options.CustomValue_3"
@@ -33,14 +33,14 @@ ___
 ```html
 <div class="input-group">
   <div class="form-group me-3 mb-4 required">
-    <label for="CustomValue_1" class="form-label">CustomValue_標題</label>
+    <label for="CustomValue_1 Select" class="form-label">CustomValue_標題</label>
     <validation-provider
       v-slot="{ classes, errors }"
       :rules="{ required: true }"
       name="CustomValue_標題"
     >
       <select
-        id="CustomValue_1"
+        id="CustomValue_1 Select"
         v-model="formInput.CustomValue_2"
         :class="classes"
         class="form-select"
