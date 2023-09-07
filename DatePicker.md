@@ -20,15 +20,15 @@ export default {
 ___
 - 如果要連動function -> 加入 @input=""
 - CustomValue_1 : 名子有對到就好
-  - CustomValue_2 : 綁定的變數名稱
-  - CustomValue_3 : 輸出格式
-    - yearFormatter : YYY
-    - yearFormatter : YYY/MM
-    - defaultFormatter : YYY/MM/DD
-  - CustomValue_4 : 選單格式
-    - year : 選年
-    - month : 選年月
-    - 直接不填該欄位: 選年月日
+- CustomValue_2 : 綁定的變數名稱
+- CustomValue_3 : 輸出格式
+  - yearFormatter : YYY
+  - yearFormatter : YYY/MM
+  - defaultFormatter : YYY/MM/DD
+- CustomValue_4 : 選單格式
+  - year : 選年
+  - month : 選年月
+  - 直接不填該欄位: 選年月日
 
 ___
 沒有輸入驗證版本
