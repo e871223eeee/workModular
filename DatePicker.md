@@ -1,4 +1,5 @@
 **日期元件使用方式**
+
 先在<script>區域引入該元件並定義
 ```C#
 <script>
@@ -32,10 +33,10 @@ ___
 ```html
 <div class="input-group">
   <div class="form-group me-3 mb-4">
-    <label for="CustomValue_1" class="form-label">CustomValue_選擇器標題</label>
+    <label for="CustomValue_1 DatePicker" class="form-label">CustomValue_選擇器標題</label>
     <DatePickerEx
       v-model="formInput.CustomValue_2"
-      :input-attr="{ id: 'CustomValue_1' }"
+      :input-attr="{ id: 'CustomValue_1 DatePicker' }"
       :input-class="{ 'form-control': true }"
       :formatter="CustomValue_3"
       placeholder="CustomValue_未輸入時顯示"
@@ -51,7 +52,7 @@ ___
 ```html
 <div class="input-group">
   <div class="form-group me-3 mb-4 required">
-    <label for="CustomValue_1" class="form-label">CustomValue_選擇器標題</label>
+    <label for="CustomValue_1 DatePicker" class="form-label">CustomValue_選擇器標題</label>
     <validation-provider
       v-slot="{ classes, errors }"
       :rules="{ required: true }"
@@ -59,7 +60,7 @@ ___
     >
       <DatePickerEx
         v-model="formInput.CustomValue_2"
-        :input-attr="{ id: 'CustomValue_1' }"
+        :input-attr="{ id: 'CustomValue_1 DatePicker' }"
         :input-class="{ ...classes, 'form-control': true }"
         :formatter="CustomValue_3"
         placeholder="CustomValue_未輸入時顯示"
@@ -69,6 +70,52 @@ ___
       />
       <span class="text-danger position-absolute">{{ errors[0] }}</span>
     </validation-provider>
+  </div>
+</div>
+```
+___
+起訖範例
+```html
+<div class="input-group">
+  <div class="form-group me-3 mb-4 required">
+    <label for="CustomValue_1 StartDatePicker" class="form-label">CustomValue_選擇器標題</label>
+    <div class="d-flex flex-row align-items-center">
+      <validation-provider
+        v-slot="{ classes, errors }"
+        :rules="{ required: true }"
+        name="CustomValue_選擇器標題(起)"
+      >
+        <DatePickerEx
+          v-model="formInput.CustomValue_2 Start"
+          :input-attr="{ id: 'CustomValue_1 StartDatePicker' }"
+          :input-class="{ ...classes, 'form-control': true }"
+          :formatter="CustomValue_3"
+          placeholder="CustomValue_未輸入時顯示(起)"
+          type="CustomValue_4"
+          output="number"
+          class="d-block"
+        />
+        <span class="text-danger position-absolute">{{ errors[0] }}</span>
+      </validation-provider>
+      <nobr><span class="mx-2">~</span></nobr>
+      <validation-provider
+        v-slot="{ classes, errors }"
+        :rules="{ required: true }"
+        name="CustomValue_選擇器標題(迄)"
+      >
+        <DatePickerEx
+          v-model="formInput.CustomValue_2 End"
+          :input-attr="{ id: 'CustomValue_1 EndDatePicker' }"
+          :input-class="{ ...classes, 'form-control': true }"
+          :formatter="CustomValue_3"
+          placeholder="CustomValue_未輸入時顯示(訖)"
+          type="CustomValue_4"
+          output="number"
+          class="d-block"
+        />
+        <span class="text-danger position-absolute">{{ errors[0] }}</span>
+      </validation-provider>
+    </div>
   </div>
 </div>
 ```
