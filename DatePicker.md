@@ -23,7 +23,7 @@ ___
 - CustomValue_2 : 綁定的變數名稱
 - CustomValue_3 : 輸出格式
   - yearFormatter : YYY
-  - yearFormatter : YYY/MM
+  - yearMonthFormatter : YYY/MM
   - defaultFormatter : YYY/MM/DD
 - CustomValue_4 : 選單格式
   - year : 選年
