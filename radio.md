@@ -12,18 +12,18 @@ ___
         <input
           class="form-check-input"
           type="radio"
-          name="CustomValue_1"
+          name="CustomValue_1 Radio"
           id="CustomValue_key_1"
           v-model="formInput.CustomValue_2"
           value="0"
         />
-        <label class="form-check-label" for="CustomValue_1"> 全部 </label>
+        <label class="form-check-label" for="CustomValue_key_1"> 全部 </label>
       </div>
       <div class="form-check me-2">
         <input
           class="form-check-input"
           type="radio"
-          name="CustomValue_1"
+          name="CustomValue_1 Radio"
           id="CustomValue_key_2"
           v-model="formInput.CustomValue_2"
           value="1"
@@ -34,7 +34,7 @@ ___
         <input
           class="form-check-input"
           type="radio"
-          name="CustomValue_1"
+          name="CustomValue_1 Radio"
           id="CustomValue_key_3"
           v-model="formInput.CustomValue_2"
           value="2"
