@@ -1,7 +1,7 @@
 **列印/清除 按鈕範例**
 配合
 - [驗證](https://github.com/e871223eeee/workModular/blob/main/vee-validate.md)
-- [列印元件](https://github.com/e871223eeee/workModular/blob/main/PrintModal.md)
+- [列印元件](https://github.com/e871223eeee/workModular/blob/main/%E5%88%97%E5%8D%B0%E5%85%83%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md)
 ___
 - 沒有驗證就不用 handleSubmit 包方法
 ```html
@@ -45,7 +45,7 @@ script內容
 ```html
 <script>
 //引入列印模塊
-import PrintModal from "@/components/Common/modals/PrintModal";
+import PrintModal from '@/components/Util/PrintModal.vue';
 export default {
   //名稱
   name: "XXXXX",
