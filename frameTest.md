@@ -3,13 +3,14 @@
 <template>
   <DefaultLayout :module-key="$route.name" :module-title="title">
     <!-- 程式主體 -->
-    <template #search>
-      
+    <template #search> 
+      <!-- 驗證 -->
+      <validation-observer v-slot="{ handleSubmit }">
+
+      </validation-observer>
     </template>
     <!-- 表格 -->
-    <template #data-table>
-
-    </template>
+    <template #data-table> </template>
   </DefaultLayout>
 </template>
 
